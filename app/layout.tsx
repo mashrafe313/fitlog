@@ -24,7 +24,7 @@ export default function RootLayout({
           <Navbar />
 
           {children}
-          <Footer />
+          {/* <Footer /> */}
           <Toaster
             position="bottom-right"
             toastOptions={{
