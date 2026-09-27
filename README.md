@@ -8,9 +8,6 @@
   A modern, responsive workout library and daily workout planner built with Next.js.
 </p>
 
-<p align="center">
-  <a href="https://fit-log-roan-three.vercel.app/">🌐 Live Demo</a>
-</p>
 
 ---
 
@@ -464,15 +461,7 @@ npm start
 
 ---
 
-## 🚀 Deployment
 
-The project is deployed using **Vercel**.
-
-### Live Link
-
-🔗 https://fit-log-roan-three.vercel.app/
-
----
 
 ## 📊 Requirements Completed
 
