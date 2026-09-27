@@ -5,7 +5,7 @@ import { FitLogProvider } from "@/context/FitLogContext";
 import Navbar from "@/components/Navbar";
 
 import { Toaster } from "react-hot-toast";
-// import Footer from "@/components/Foter";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "FitLog",
@@ -24,7 +24,7 @@ export default function RootLayout({
           <Navbar />
 
           {children}
-          {/* <Footer /> */}
+          <Footer />
           <Toaster
             position="bottom-right"
             toastOptions={{
