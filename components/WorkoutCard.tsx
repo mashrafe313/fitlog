@@ -19,7 +19,7 @@ export default function WorkoutCard({
         <img
           src={workout.image}
           alt={workout.name}
-          className="h-85 w-full object-cover transition duration-500 group-hover:scale-105"
+          className="h-70 w-full object-cover transition duration-500 group-hover:scale-105"
         />
       </div>
 

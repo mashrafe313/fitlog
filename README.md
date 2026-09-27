@@ -9,7 +9,7 @@ The application provides a clean and responsive interface for browsing workouts 
 ## 🚀 Live Demo
 
 🔗 **Live Website:**
-
+https://fitlog-vert-tau.vercel.app/
 
 ---
 

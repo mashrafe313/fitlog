@@ -36,7 +36,7 @@ export default async function WorkoutDetailsPage({
         <div className="mx-auto max-w-7xl px-5 pt-6 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 border rounded-[8px]  px-2 py-2 text-[12px] font-bold uppercase tracking-wider text-zinc-500 transition hover:text-[#ccff00]"
+            className="inline-flex items-center gap-2  px-2 py-2 text-[12px] font-bold uppercase tracking-wider text-zinc-500 transition hover:text-[#ccff00]"
           >
             <ArrowLeft size={13} />
             Back To Library
