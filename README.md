@@ -1,36 +1,524 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💪 FitLog — Workout Library
 
-## Getting Started
+<p align="center">
+  <strong>Train With Intent. Log Every Set.</strong>
+</p>
 
-First, run the development server:
+<p align="center">
+  A modern, responsive workout library and daily workout planner built with Next.js.
+</p>
+
+
+---
+
+## 📌 About The Project
+
+**FitLog** is a dark-themed workout library designed to help users discover exercises, view detailed workout information, create a daily workout plan, and save workouts for later.
+
+The application provides a clean and responsive interface for browsing workouts and managing a personalized workout routine.
+
+---
+
+## 🚀 Live Demo
+
+🔗 **Live Website:**
+https://fit-log-roan-three.vercel.app/
+
+---
+
+## ✨ Features
+
+### 🏋️ Workout Library
+
+* Displays workout exercises fetched from an external API.
+* Responsive workout card grid.
+* Workout images and illustrations.
+* Category tags.
+* Equipment information.
+* Duration, calories, and rating statistics.
+* Sort workouts by:
+
+  * Duration
+  * Calories
+  * Rating
+
+### 📖 Workout Details
+
+* Dedicated detail page for every workout.
+* Large workout image.
+* Workout description.
+* Category tags.
+* Key workout specifications.
+* Equipment and difficulty information.
+* Sets and reps.
+* Duration and calories.
+* Rating.
+* Step-by-step workout instructions.
+
+### 📋 Today's Plan
+
+* Add workouts to today's workout plan.
+* Maximum of **5 lifts** per day.
+* Live exercise count.
+* Total workout duration.
+* Total calories.
+* View workout details.
+* Mark workouts as completed.
+* Remove workouts from the plan.
+
+### 🔖 Saved Workouts
+
+* Save workouts for later.
+* View saved workouts from the My Plan page.
+* Remove saved workouts when no longer needed.
+
+### 🔔 Toast Notifications
+
+Users receive feedback when they:
+
+* Add a workout to today's plan.
+* Save a workout.
+* Mark a workout as completed.
+* Remove a workout.
+
+### 📱 Responsive Design
+
+The website is designed to work across:
+
+* 📱 Mobile
+* 📲 Tablet
+* 💻 Desktop
+
+The workout grid, navigation, hero section, cards, and detail page adapt to different screen sizes.
+
+### 💾 Local Storage
+
+Workout plan and saved workout data are persisted using `localStorage`, allowing the user's data to survive page reloads.
+
+### ❌ 404 Page
+
+A custom 404 page is included for invalid or unknown routes.
+
+### ⏳ Loading States
+
+Loading animations/states are displayed while workout data is being fetched from the API.
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology             | Purpose                            |
+| ---------------------- | ---------------------------------- |
+| **Next.js**            | Frontend framework                 |
+| **React**              | Building UI components             |
+| **Next.js App Router** | Page routing and navigation        |
+| **Tailwind CSS**       | Styling and responsive design      |
+| **JavaScript**         | Application logic                  |
+| **REST API**           | Fetching workout data              |
+| **localStorage**       | Persisting plan and saved workouts |
+| **Vercel**             | Deployment                         |
+
+---
+
+## 🔌 API
+
+FitLog uses workout data from the following API.
+
+### All Workouts
+
+```text
+https://api.abcz.workers.dev/api/fitlog
+```
+
+### Single Workout
+
+```text
+https://api.abcz.workers.dev/api/fitlog/:id
+```
+
+### Alternative API
+
+```text
+https://api.api-store.workers.dev/api/fitlog
+```
+
+### Alternative Single Workout API
+
+```text
+https://api.api-store.workers.dev/api/fitlog/:id
+```
+
+---
+
+## 📂 Main Pages
+
+| Route           | Description                   |
+| --------------- | ----------------------------- |
+| `/`             | Workout Library / Home        |
+| `/workout/[id]` | Workout Details               |
+| `/my-plan`      | Today's Plan & Saved Workouts |
+| `/*`            | Custom 404 Page               |
+
+---
+
+## 🧭 Navigation
+
+The main navigation contains:
+
+* **Workout**
+* **My Plan**
+
+The navbar also contains two dynamic counters:
+
+### 🟢 Plan
+
+Shows the number of workouts currently added to **Today's Plan**.
+
+### ⚪ Saved
+
+Shows the number of workouts currently saved for later.
+
+Both counters link to:
+
+```text
+/my-plan
+```
+
+---
+
+## 🏠 Home Page
+
+The homepage contains:
+
+### Hero Section
+
+**WORKOUT LIBRARY**
+
+> TRAIN WITH INTENT. LOG EVERY SET.
+
+FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today's plan, and watch the week's work add up.
+
+The **BROWSE WORKOUTS** button smoothly takes the user to the workout library.
+
+### Library
+
+The library displays all workouts received from the API.
+
+Each workout card contains:
+
+* Workout image
+* Category
+* Workout name
+* Equipment
+* Duration
+* Calories
+* Rating
+
+Clicking a workout card opens its detail page.
+
+---
+
+## 📄 Workout Details
+
+Each workout has its own dynamic detail page.
+
+The page contains:
+
+* Workout image
+* Workout title
+* Description
+* Category tags
+* Equipment
+* Difficulty
+* Sets
+* Reps
+* Duration
+* Calories
+* Rating
+* Instructions
+
+### Actions
+
+**Add to Today's Plan**
+
+Adds the workout to the daily plan.
+
+**Save for Later**
+
+Adds the workout to the Saved section.
+
+Both actions display a toast notification.
+
+---
+
+## 📋 My Plan
+
+The My Plan page contains two tabs:
+
+### Today's Plan
+
+Displays workouts selected for today's routine.
+
+The page includes three live metrics:
+
+```text
+Exercises
+Minutes
+Calories
+```
+
+The maximum number of workouts in today's plan is:
+
+```text
+5
+```
+
+### Saved
+
+Displays workouts saved for later.
+
+---
+
+## ✅ Workout Actions
+
+Each workout in Today's Plan provides:
+
+### View Details
+
+Opens the workout's detail page.
+
+### Mark as Done
+
+Marks the workout as completed and displays a confirmation toast.
+
+### Remove
+
+Removes the workout from Today's Plan and updates the metrics and navbar counter.
+
+---
+
+## 🔍 Sorting
+
+The workout library includes a **Sort By** dropdown.
+
+Available options:
+
+```text
+Duration
+Calories
+Rating
+```
+
+The selected option dynamically changes the order of the workout list.
+
+---
+
+## 🎨 Design
+
+The project follows a modern dark gym aesthetic inspired by the provided Figma design.
+
+### Design Characteristics
+
+* Dark background
+* High-contrast typography
+* Bright accent color
+* Bold display headings
+* Workout-focused imagery
+* Card-based layout
+* Responsive navigation
+* Minimal and clean interface
+
+---
+
+## 📱 Responsive Layout
+
+FitLog supports different screen sizes.
+
+### Desktop
+
+* Full navigation
+* Two-column hero
+* 3-column workout grid
+* Two-column workout details
+
+### Tablet
+
+* Responsive navigation
+* 2-column workout grid
+* Adapted spacing and typography
+
+### Mobile
+
+* Mobile-friendly navigation
+* Stacked hero section
+* Single-column workout cards
+* Stacked workout details
+* Touch-friendly buttons
+
+---
+
+## ⚡ Performance & User Experience
+
+The application includes:
+
+* API loading state
+* Responsive UI
+* Dynamic routing
+* Toast notifications
+* Persistent local data
+* Empty states
+* 404 page
+* Interactive sorting
+* Client-side state management
+
+---
+
+## 🗂️ Project Structure
+
+A simplified project structure:
+
+```text
+fitlog/
+│
+├── app/
+│   ├── page.jsx
+│   ├── my-plan/
+│   │   └── page.jsx
+│   ├── workout/
+│   │   └── [id]/
+│   │       └── page.jsx
+│   ├── not-found.jsx
+│   ├── layout.jsx
+│   └── globals.css
+│
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── WorkoutCard.jsx
+│   ├── WorkoutGrid.jsx
+│   ├── WorkoutDetails.jsx
+│   ├── MyPlanCard.jsx
+│   ├── Footer.jsx
+│   └── Toast.jsx
+│
+├── public/
+│   └── assets/
+│
+├── package.json
+├── README.md
+└── next.config.js
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+Move into the project directory:
+
+```bash
+cd fitlog
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the application in your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🏗️ Build For Production
 
-To learn more about Next.js, take a look at the following resources:
+Create a production build:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Start the production server:
 
-## Deploy on Vercel
+```bash
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## 📊 Requirements Completed
+
+| Requirement         | Status |
+| ------------------- | :----: |
+| Responsive Design   |    ✅   |
+| Navbar              |    ✅   |
+| Hero Section        |    ✅   |
+| Workout Library     |    ✅   |
+| API Integration     |    ✅   |
+| Workout Details     |    ✅   |
+| Add to Today's Plan |    ✅   |
+| Save for Later      |    ✅   |
+| My Plan Page        |    ✅   |
+| Dynamic Counters    |    ✅   |
+| Loading State       |    ✅   |
+| Toast Notifications |    ✅   |
+| 404 Page            |    ✅   |
+| Sort Dropdown       |    ✅   |
+| Mark as Done        |    ✅   |
+| Remove Workout      |    ✅   |
+| Local Storage       |    ✅   |
+| Responsive Layout   |    ✅   |
+| README              |    ✅   |
+| Deployment          |    ✅   |
+
+---
+
+## 🌟 Key Features
+
+1. **Dynamic Workout Library** — Fetches workout data from an external REST API.
+2. **Workout Details** — Provides complete exercise information and instructions.
+3. **Daily Workout Planner** — Allows users to build a workout plan with a 5-lift limit.
+4. **Saved Workouts** — Lets users save exercises for later.
+5. **Persistent Data** — Uses localStorage to preserve the user's plan and saved workouts.
+6. **Dynamic Statistics** — Calculates exercises, total minutes, and calories.
+7. **Responsive UI** — Works across mobile, tablet, and desktop.
+8. **Interactive User Feedback** — Uses toast notifications for important actions.
+
+---
+
+## 👨‍💻 Developer
+
+**Mahin Mashrafe**
+
+Frontend Developer
+
+Built with ❤️ using **Next.js + React + Tailwind CSS**
+
+---
+
+## 📜 License
+
+This project was created for educational purposes as part of a web development assignment.
+
+---
+
+<p align="center">
+  💪 <strong>FITLOG</strong> — Train hard. Log honest.
+</p>
