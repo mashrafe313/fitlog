@@ -272,3 +272,24 @@ FitLog is optimized for different screen sizes.
 ### Tablet
 
 * Flexible grid layout
+
+---
+
+## 📦 Dependencies
+
+The project uses the following main dependencies:
+
+- **Next.js** — React framework for building the application
+- **React** — Building the user interface
+- **TypeScript** — Type-safe JavaScript development
+- **Tailwind CSS** — Styling and responsive design
+- **Lucide React** — Icons used throughout the interface
+- **React Hot Toast** — Toast notifications for user actions
+
+All dependencies are listed in the project's `package.json` file.
+
+To install all dependencies, run:
+
+```bash
+npm install
+
